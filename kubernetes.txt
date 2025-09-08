@@ -48,10 +48,10 @@ K8S Advantages
 K8S Architecture
 =================
 
-1) kubectl
-2) Control Plane
-3) Worker Nodes
-
+k8s works on cluster(group of servers) architecture
+1) kubectl  (software to communicate with k8s cluster)
+2) Control Plane  ==>is like heart of Kubernetes (master)
+3) Worker Nodes(slave)
 
 ==================
 K8S Cluster Setup
@@ -87,6 +87,23 @@ K8S Terminology
 2) Services
 3) Namespaces
 4) Deployment
+===========
+api server
+==========
+1)whenever request is received it receives and store it in etcd
+
+2)etcd is like database for Kubernetes
+
+3)scheduler will check pending tasks in etcd and it will schedule those tasks in worker nodes
+
+4)scheduler will get available worker nodes info by using kubelet
+
+5)kube proxy provide network for cluster communication
+
+6)controller manager will monitor all k8s resources functionality
+
+7)
+
 
 ==============
 What is POD ?
@@ -152,7 +169,10 @@ What is Deployment
 
 		
 
+commands
 
+
+==> kubectl get nodes
 
 
 
